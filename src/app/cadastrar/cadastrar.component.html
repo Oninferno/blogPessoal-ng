@@ -8,7 +8,7 @@
           <h1 class="text-center">Cadastro</h1>
 
           <div class="form-floating my-3">
-            <input
+            <input [(ngModel)]='user.nome'
               type="text"
               class="form-control"
               id="nome"
@@ -18,7 +18,7 @@
           </div>
 
           <div class="form-floating my-3">
-            <input
+            <input [(ngModel)]='user.usuario'
               type="text"
               class="form-control"
               id="usuario"
@@ -28,7 +28,7 @@
           </div>
 
           <div class="form-floating my-3">
-            <input
+            <input [(ngModel)]='user.foto'
               type="text"
               class="form-control"
               id="foto"
@@ -38,7 +38,7 @@
           </div>
 
           <div class="form-floating my-3">
-            <input
+            <input (input)="confirmSenha($event)"
               type="password"
               class="form-control"
               id="senha"
@@ -48,7 +48,7 @@
           </div>
 
           <div class="form-floating my-3">
-            <input
+            <input [(ngModel)]='user.senha'
               type="password"
               class="form-control"
               id="confirmSenha"
@@ -58,10 +58,11 @@
           </div>
 
           <div class="form-floating">
-            <select
+            <select 
               class="form-select"
               id="tipo"
               aria-label="Seletor de tipo de usuário"
+              (change)="tipoUser($event)"
             >
               <option selected>Padrão</option>
               <option value="1">Escritor</option>
@@ -73,7 +74,7 @@
 
           <div class="d-flex justify-content-center my-3">
             <button type="submit" class="btn btn-danger mx-2" routerLink="/entrar">Cancelar</button>
-            <button type="submit" class="btn btn-success mx-2">Confirmar</button>
+            <button type="submit" class="btn btn-success mx-2" (click)="cadastrar()">Cadastrar</button>
           </div>
         </div>
       </div>
