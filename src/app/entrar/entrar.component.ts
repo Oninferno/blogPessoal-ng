@@ -23,23 +23,23 @@ export class EntrarComponent implements OnInit {
   }
 
   entrar() {
-    this.auth.entrar(this.userLogin).subscribe((resp: UserLogin)=>{
+    this.auth.entrar(this.userLogin).subscribe({
+      next: (resp: UserLogin)=>{
       this.userLogin = resp
 
-      environment.token = this.userLogin.token
+      environment.id = this.userLogin.id
       environment.nome = this.userLogin.nome
       environment.foto = this.userLogin.foto
-      environment.id = this.userLogin.id
+      environment.token = this.userLogin.token
 
       this.router.navigate(['/inicio'])
-    }, erro =>{
-      if(erro.status == 500){
-        console.log(erro)
-        alert(erro.errorMsg)
+    }, 
+    error: erro =>{
+      if(erro.status == 401){
+        alert("Usuário ou senha estão incorretos")
       }
-
-    })
-
+    },
+    });
   }
 
 }
