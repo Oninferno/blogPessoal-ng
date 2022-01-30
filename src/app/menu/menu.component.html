@@ -28,12 +28,14 @@
         </li>
 
         <li class="nav-item ps-3">
-          <a href=""
-            ><p class="text-white fs-16 m-0">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i></p
-          ></a>
+          <a [routerLink]="['/user-edit', id]">
+            <p class="text-white fs-16 m-0">
+              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </p>
+          </a>
         </li>
       </ul>
+
       <ul class="navbar-nav ms-auto d-flex align-items-center">
         <li class="nav-item ps-3">
           <a (click)="sair()" class="m-0 font-weight-bold text-white fs-16"
