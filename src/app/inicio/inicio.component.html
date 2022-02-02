@@ -48,7 +48,7 @@
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted">Tema: {{item.tema.descricao}}</small>
                 <p class="card-text mt-3">{{item.texto}}</p>
-                <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
                 <p class="card-text"><small class="text-muted">de: {{item.usuario.nome}}</small></p>
               </div>
             </div>
@@ -65,7 +65,7 @@
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <small class="text-muted">Tema: {{item.tema.descricao}}</small>
                 <p class="card-text mt-3">{{item.texto}}</p>
-                <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
                 
                 <a [routerLink]="['/postagem-edit', item.id]" class="text-info me-3" href="">Editar</a>
                 <a [routerLink]="['/postagem-delete', item.id]" class="text-danger" href="">Apagar</a>
@@ -83,7 +83,7 @@
               <div class="card-body">
                 <h5 class="card-title m-0">{{item.titulo}}</h5>
                 <p class="card-text mt-3">{{item.texto}}</p>
-                <p class="card-text"><small class="text-muted">{{item.date | date: 'dd/MM/yyyy'}} às {{item.date | date: 'HH:mm'}}</small></p>
+                <p class="card-text"><small class="text-muted">{{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}}</small></p>
                 <p class="card-text"><small class="text-muted">de: {{item.usuario.nome}}</small></p>
               </div>
             </div>
@@ -99,7 +99,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Nova Postagem</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Nosva Postagem</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
