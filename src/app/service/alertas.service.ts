@@ -12,26 +12,26 @@ export class AlertasService {
   ) { }
 
 
-  private showAlert(msg: string, tipo: string) {
+  private showAlert(message: string, type: string) {
     const bsModalRef: BsModalRef = this.bsModalService.show(AlertasComponent)
-    bsModalRef.content.type = tipo
-    bsModalRef.content.message = msg
+    bsModalRef.content.type = type
+    bsModalRef.content.message = message
   }
 
-  showAlertDanger(msg: string){
-    this.showAlert(msg, 'danger')
+  showAlertDanger(message: string){
+    this.showAlert(message, 'danger')
   }
   
-  showAlertSuccess(msg: string){
-    this.showAlert(msg, 'success')
+  showAlertSuccess(message: string){
+    this.showAlert(message, 'success')
   }
 
-  showAlertInfo(msg: string){
-    this.showAlert(msg, 'info')
+  showAlertInfo(message: string){
+    this.showAlert(message, 'info')
   }
 
-  showAlertWarning(msg: string){
-    this.showAlert(msg, 'warning')
+  showAlertWarning(message: string){
+    this.showAlert(message, 'warning')
   }
   
 }
